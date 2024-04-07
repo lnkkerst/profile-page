@@ -11,6 +11,8 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.6",
     "@babel/preset-typescript": "^7.24.1",
+    "@iconify-json/fa6-brands": "^1.1.19",
+    "@iconify-json/mdi": "^1.1.66",
     "@mdi/js": "^7.4.47",
     "@types/node": "^18.19.30",
     "@unocss/nuxt": "^0.59.0",
@@ -22,6 +24,7 @@
     "prettier": "^2.8.8",
     "sass": "^1.74.1",
     "unocss": "^0.59.0",
+    "unplugin-icons": "^0.18.5",
     "vite-plugin-vuetify": "^2.0.3",
     "vuetify": "^3.5.14"
   },

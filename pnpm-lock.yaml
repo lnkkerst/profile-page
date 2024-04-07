@@ -16,6 +16,12 @@ devDependencies:
   '@babel/preset-typescript':
     specifier: ^7.24.1
     version: 7.24.1(@babel/core@7.24.4)
+  '@iconify-json/fa6-brands':
+    specifier: ^1.1.19
+    version: 1.1.19
+  '@iconify-json/mdi':
+    specifier: ^1.1.66
+    version: 1.1.66
   '@mdi/js':
     specifier: ^7.4.47
     version: 7.4.47
@@ -49,6 +55,9 @@ devDependencies:
   unocss:
     specifier: ^0.59.0
     version: 0.59.0(@unocss/webpack@0.59.0)(postcss@8.4.38)(vite@5.2.8)
+  unplugin-icons:
+    specifier: ^0.18.5
+    version: 0.18.5
   vite-plugin-vuetify:
     specifier: ^2.0.3
     version: 2.0.3(vite@5.2.8)(vue@3.4.21)(vuetify@3.5.14)
@@ -172,6 +181,12 @@ packages:
     dependencies:
       execa: 5.1.1
       find-up: 5.0.0
+    dev: true
+
+  /@antfu/install-pkg@0.3.2:
+    resolution: {integrity: sha512-FFYqME8+UHlPnRlX/vn+8cTD4Wo/nG/lzRxpABs3XANBmdJdNImVz3QvjNAE/W3PSCNbG387FOz8o5WelnWOlg==}
+    dependencies:
+      execa: 8.0.1
     dev: true
 
   /@antfu/utils@0.7.7:
@@ -838,6 +853,18 @@ packages:
 
   /@humanwhocodes/object-schema@2.0.3:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
+    dev: true
+
+  /@iconify-json/fa6-brands@1.1.19:
+    resolution: {integrity: sha512-3Dl0D1gtFwIj7/GT2xJbkM9D/LjuozsgfLrqRWP6B5xuajtsyEvR1wD0Z06y3iaNtASpgWPWyYbml+AHQ3Hw0g==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/mdi@1.1.66:
+    resolution: {integrity: sha512-7KPF2RVUUWav/hXCM8Ti/smqu3cmgePJpiX9CSkldiL+80+eBRBeKlc4vPOc9jhAItlqIU1vKsbKoPP0JIfgbg==}
+    dependencies:
+      '@iconify/types': 2.0.0
     dev: true
 
   /@iconify/types@2.0.0:
@@ -8444,6 +8471,37 @@ packages:
     transitivePeerDependencies:
       - postcss
       - rollup
+      - supports-color
+    dev: true
+
+  /unplugin-icons@0.18.5:
+    resolution: {integrity: sha512-KVNAohXbZ7tVcG1C3p6QaC7wU9Qrj7etv4XvsMMJAxr5LccQZ+Iuv5LOIv/7GtqXaGN1BuFCqRO1ErsHEgEXdQ==}
+    peerDependencies:
+      '@svgr/core': '>=7.0.0'
+      '@svgx/core': ^1.0.1
+      '@vue/compiler-sfc': ^3.0.2 || ^2.7.0
+      vue-template-compiler: ^2.6.12
+      vue-template-es2015-compiler: ^1.9.0
+    peerDependenciesMeta:
+      '@svgr/core':
+        optional: true
+      '@svgx/core':
+        optional: true
+      '@vue/compiler-sfc':
+        optional: true
+      vue-template-compiler:
+        optional: true
+      vue-template-es2015-compiler:
+        optional: true
+    dependencies:
+      '@antfu/install-pkg': 0.3.2
+      '@antfu/utils': 0.7.7
+      '@iconify/utils': 2.1.22
+      debug: 4.3.4
+      kolorist: 1.8.0
+      local-pkg: 0.5.0
+      unplugin: 1.10.1
+    transitivePeerDependencies:
       - supports-color
     dev: true
 

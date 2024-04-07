@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { markRaw } from "vue";
 import { variants } from "@catppuccin/palette";
 import {
   mdiArch,
@@ -7,12 +8,12 @@ import {
   mdiGithub,
   mdiLanguageRust,
   mdiNotebook,
+  mdiReact,
   mdiSchool,
-  mdiSend,
-  mdiTwitter,
-  mdiVuejs,
 } from "@mdi/js";
 import avatar from "~/assets/img/avatar.jpg";
+import mdiTelegram from "~icons/mdi/telegram";
+import mdiTwitterX from "~icons/fa6-brands/x-twitter";
 
 useHead({
   title: "lnkkerst - profile",
@@ -46,8 +47,8 @@ const chips = reactive([
   },
   {
     title: "Web",
-    color: "#3ba777",
-    icon: mdiVuejs,
+    color: "#087EA4",
+    icon: mdiReact,
   },
   {
     title: "Rust Beginner",
@@ -77,14 +78,14 @@ const links = reactive([
   },
   {
     title: "Telegram",
-    icon: mdiSend,
+    icon: markRaw(mdiTelegram),
     color: "#239ad5",
     href: "https://t.me/lnkkerst",
   },
   {
-    title: "Twitter",
-    icon: mdiTwitter,
-    color: "#1b92e1",
+    title: "X",
+    icon: markRaw(mdiTwitterX),
+    color: "#0F1217",
     href: "https://twitter.com/lnkkerst1",
   },
 ]);
@@ -126,20 +127,22 @@ const links = reactive([
         </div>
       </v-card-text>
       <v-card-actions>
-        <div mx="auto" flex justify="center">
-          <v-tooltip v-for="item in links" :key="item.title" location="top">
-            <template #activator="{ props: activatorProps }">
-              <NuxtLink :to="item.href">
-                <v-btn
-                  :icon="item.icon"
-                  :color="item.color"
-                  v-bind="activatorProps"
-                ></v-btn>
-              </NuxtLink>
-            </template>
-            {{ item.title }}
-          </v-tooltip>
-        </div>
+        <ClientOnly>
+          <div mx="auto" flex justify="center">
+            <v-tooltip v-for="item in links" :key="item.title" location="top">
+              <template #activator="{ props: activatorProps }">
+                <NuxtLink :to="item.href">
+                  <v-btn
+                    :icon="item.icon"
+                    :color="item.color"
+                    v-bind="activatorProps"
+                  ></v-btn>
+                </NuxtLink>
+              </template>
+              {{ item.title }}
+            </v-tooltip>
+          </div>
+        </ClientOnly>
       </v-card-actions>
     </v-card>
   </div>
