@@ -1,3 +1,4 @@
+import transformerAttributifyJsxBabel from "@unocss/transformer-attributify-jsx-babel";
 import {
   defineConfig,
   presetAttributify,
@@ -5,9 +6,8 @@ import {
   presetTypography,
   presetUno,
   presetWebFonts,
-  transformerDirectives
-} from 'unocss';
-import transformerAttributifyJsxBabel from '@unocss/transformer-attributify-jsx-babel';
+  transformerDirectives,
+} from "unocss";
 
 export default defineConfig({
   presets: [
@@ -15,12 +15,12 @@ export default defineConfig({
     presetTypography(),
     presetTagify(),
     presetWebFonts({
-      provider: 'fontshare',
+      provider: "fontshare",
       fonts: {
-        sans: ['Roboto']
-      }
+        sans: ["Roboto"],
+      },
     }),
-    presetAttributify()
+    presetAttributify(),
   ],
-  transformers: [transformerDirectives(), transformerAttributifyJsxBabel()]
+  transformers: [transformerDirectives(), transformerAttributifyJsxBabel()],
 });

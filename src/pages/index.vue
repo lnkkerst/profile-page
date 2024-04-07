@@ -1,76 +1,76 @@
 <script setup lang="ts">
-import { variants } from '@catppuccin/palette';
-import avatar from '~/assets/img/avatar.jpg';
+import { variants } from "@catppuccin/palette";
+import avatar from "~/assets/img/avatar.jpg";
 
 useHead({
-  title: 'lnkkerst - profile',
-  link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+  title: "lnkkerst - profile",
+  link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   meta: [
-    { charset: 'utf-8' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { charset: "utf-8" },
+    { name: "viewport", content: "width=device-width, initial-scale=1" },
     {
-      hid: 'description',
-      name: 'description',
-      content: "lnkkerst's profile"
-    }
-  ]
+      hid: "description",
+      name: "description",
+      content: "lnkkerst's profile",
+    },
+  ],
 });
 
 const chips = reactive([
   {
-    title: 'Student',
+    title: "Student",
     color: variants.latte.mauve.hex,
-    icon: 'mdi-book'
+    icon: "mdi-book",
   },
   {
-    title: 'SDU',
-    color: '#9c0c13',
-    icon: 'mdi-school'
+    title: "SDU",
+    color: "#9c0c13",
+    icon: "mdi-school",
   },
   {
-    title: 'Arch Linux User',
-    color: '#0e8bc5',
-    icon: 'mdi-arch'
+    title: "Arch Linux User",
+    color: "#0e8bc5",
+    icon: "mdi-arch",
   },
-  { title: 'Web', color: '#3ba777', icon: 'mdi-vuejs' },
+  { title: "Web", color: "#3ba777", icon: "mdi-vuejs" },
   {
-    title: 'Rust Beginner',
-    color: '#372b27',
-    icon: 'mdi-language-rust'
-  }
+    title: "Rust Beginner",
+    color: "#372b27",
+    icon: "mdi-language-rust",
+  },
 ]);
 
 const links = reactive([
   {
-    title: 'Blog',
-    icon: 'mdi-notebook',
+    title: "Blog",
+    icon: "mdi-notebook",
     color: variants.latte.red.hex,
-    href: 'https://blog.lnkkerst.me'
+    href: "https://blog.lnkkerst.me",
   },
   {
-    title: 'Github',
-    icon: 'mdi-github',
-    color: '#151920',
-    href: 'https://github.com/lnkkerst'
+    title: "Github",
+    icon: "mdi-github",
+    color: "#151920",
+    href: "https://github.com/lnkkerst",
   },
   {
-    title: 'E-Mail',
-    icon: 'mdi-email',
+    title: "E-Mail",
+    icon: "mdi-email",
     color: variants.latte.teal.hex,
-    href: 'mailto:lnkkerst04@gmail.com'
+    href: "mailto:lnkkerst04@gmail.com",
   },
   {
-    title: 'Telegram',
-    icon: 'mdi-send',
-    color: '#239ad5',
-    href: 'https://t.me/lnkkerst'
+    title: "Telegram",
+    icon: "mdi-send",
+    color: "#239ad5",
+    href: "https://t.me/lnkkerst",
   },
   {
-    title: 'Twitter',
-    icon: 'mdi-twitter',
-    color: '#1b92e1',
-    href: 'https://twitter.com/lnkkerst1'
-  }
+    title: "Twitter",
+    icon: "mdi-twitter",
+    color: "#1b92e1",
+    href: "https://twitter.com/lnkkerst1",
+  },
 ]);
 </script>
 
