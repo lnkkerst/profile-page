@@ -1,5 +1,17 @@
 <script setup lang="ts">
 import { variants } from "@catppuccin/palette";
+import {
+  mdiArch,
+  mdiBook,
+  mdiEmail,
+  mdiGithub,
+  mdiLanguageRust,
+  mdiNotebook,
+  mdiSchool,
+  mdiSend,
+  mdiTwitter,
+  mdiVuejs,
+} from "@mdi/js";
 import avatar from "~/assets/img/avatar.jpg";
 
 useHead({
@@ -20,54 +32,58 @@ const chips = reactive([
   {
     title: "Student",
     color: variants.latte.mauve.hex,
-    icon: "mdi-book",
+    icon: mdiBook,
   },
   {
     title: "SDU",
     color: "#9c0c13",
-    icon: "mdi-school",
+    icon: mdiSchool,
   },
   {
     title: "Arch Linux User",
     color: "#0e8bc5",
-    icon: "mdi-arch",
+    icon: mdiArch,
   },
-  { title: "Web", color: "#3ba777", icon: "mdi-vuejs" },
+  {
+    title: "Web",
+    color: "#3ba777",
+    icon: mdiVuejs,
+  },
   {
     title: "Rust Beginner",
     color: "#372b27",
-    icon: "mdi-language-rust",
+    icon: mdiLanguageRust,
   },
 ]);
 
 const links = reactive([
   {
     title: "Blog",
-    icon: "mdi-notebook",
+    icon: mdiNotebook,
     color: variants.latte.red.hex,
     href: "https://blog.lnkkerst.me",
   },
   {
     title: "Github",
-    icon: "mdi-github",
+    icon: mdiGithub,
     color: "#151920",
     href: "https://github.com/lnkkerst",
   },
   {
     title: "E-Mail",
-    icon: "mdi-email",
+    icon: mdiEmail,
     color: variants.latte.teal.hex,
     href: "mailto:lnkkerst04@gmail.com",
   },
   {
     title: "Telegram",
-    icon: "mdi-send",
+    icon: mdiSend,
     color: "#239ad5",
     href: "https://t.me/lnkkerst",
   },
   {
     title: "Twitter",
-    icon: "mdi-twitter",
+    icon: mdiTwitter,
     color: "#1b92e1",
     href: "https://twitter.com/lnkkerst1",
   },
@@ -76,7 +92,7 @@ const links = reactive([
 
 <template>
   <div grid place-items="center" w="screen" h="screen">
-    <v-card w="1/4" max-w="540px" min-w="300px" elevation="3">
+    <v-card w="1/4" max-w="360px" min-w="300px" elevation="3">
       <v-card-title>
         <div flex flex-col items-center mt="xl">
           <v-avatar size="x-large">
